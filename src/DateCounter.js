@@ -84,7 +84,7 @@ import { useReducer } from "react";
 const initialState = { count: 0, step: 1 };
 
 function reduce(state, action) {
-  console.log(state);
+  console.log(state)
   switch (action.type) {
     case "inc":
       return { ...state, count: state.count + state.step };
