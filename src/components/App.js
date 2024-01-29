@@ -16,7 +16,8 @@ const initialState = {
   // 'loading', 'error', 'ready', 'active', 'finished'
   status: "loading",
   index: 0,
-  answer: null
+  answer: null,
+  points:0
 }
 
 
@@ -42,8 +43,16 @@ function reducer(state, action) {
       }
 
     case "newAnswer":
+      const question = state.questions.at(state.index);
+
       return {
-        ...state, answer: action.payload
+        ...state,
+        answer: action.payload,
+        
+        points: action.payload === question.correctOption
+          ? state.points + question.points : state.points
+
+
       }
 
     default: throw new Error('unknown Error')
