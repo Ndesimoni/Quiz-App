@@ -1,14 +1,15 @@
-import React from 'react'
-import Options from './Options'
+import React from "react";
+import Options from "./Options";
 
-function Questions({ questions, dispatch,answer }) {
-    console.log(questions)
-    return (
-        <div>
-            <h4>{questions.question}</h4>
-            <Options questions={questions} dispatch={dispatch} answer={answer}/>
-        </div>
-    )
+function Questions({ questions, dispatch, answer }) {
+  console.log(questions);
+  console.log(questions.Options);
+  return (
+    <div>
+      <h4>{questions.question}</h4>
+      <Options questions={questions} dispatch={dispatch} answer={answer} />
+    </div>
+  );
 }
 
-export default Questions
+export default Questions;
