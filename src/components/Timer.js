@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
+import { useCustom } from "./context/ContextProvider";
 
-const Timer = ({ dispatch, secondsRemaining }) => {
+const Timer = () => {
+  const { dispatch, secondsRemaining } = useCustom();
   const mins = Math.floor(secondsRemaining / 60);
 
   const sec = secondsRemaining % 60;

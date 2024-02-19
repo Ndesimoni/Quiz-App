@@ -1,4 +1,7 @@
-const FinishScreen = ({ points, maxPossiblePoints, highScore, dispatch }) => {
+import { useCustom } from "./context/ContextProvider";
+
+const FinishScreen = () => {
+  const { points, maxPossiblePoints, highScore, dispatch } = useCustom();
   const percentage = (points / maxPossiblePoints) * 100;
 
   let emoji;

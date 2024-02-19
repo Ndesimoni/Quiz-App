@@ -1,4 +1,7 @@
-const NextButton = ({ answer, dispatch, index, numQuestions }) => {
+import { useCustom } from "./context/ContextProvider";
+
+const NextButton = () => {
+  const { answer, dispatch, index, numQuestions } = useCustom();
   if (answer === null) return null;
 
   if (index < numQuestions - 1)

@@ -1,4 +1,7 @@
-const Options = ({ questions, dispatch, answer }) => {
+import { useCustom } from "./context/ContextProvider";
+
+const Options = () => {
+  const { questions, dispatch, answer } = useCustom();
   const hasAnswer = answer !== null;
   console.log(questions);
   console.log(questions.options);
