@@ -1,4 +1,7 @@
-const NextButton = ({ answer, dispatch, index, numQuestions }) => {
+import { useCusHookValue } from "../context/ReactQuizContext";
+
+const NextButton = () => {
+  const { answer, dispatch, index, numQuestions } = useCusHookValue();
   if (answer === null) return null;
 
   if (index < numQuestions - 1)

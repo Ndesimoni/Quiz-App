@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
+import { useCusHookValue } from "../context/ReactQuizContext";
 
-const Timer = ({ dispatch, secondsRemaining }) => {
+const Timer = () => {
+  const { dispatch, secondsRemaining } = useCusHookValue();
   const mins = Math.floor(secondsRemaining / 60);
 
   const sec = secondsRemaining % 60;

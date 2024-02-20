@@ -1,4 +1,7 @@
-const FinishScreen = ({ points, maxPossiblePoints, highScore, dispatch }) => {
+import { useCusHookValue } from "../context/ReactQuizContext";
+
+const FinishScreen = () => {
+  const { points, maxPossiblePoints, highScore, dispatch } = useCusHookValue();
   const percentage = (points / maxPossiblePoints) * 100;
 
   let emoji;

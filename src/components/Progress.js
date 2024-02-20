@@ -1,10 +1,11 @@
-const Progress = ({
-  index,
-  numQuestions,
-  points,
-  maxPossiblePoints,
-  answer,
-}) => {
+// import { useContext } from "react";
+
+import { useCusHookValue } from "../context/ReactQuizContext";
+
+const Progress = () => {
+  const { index, numQuestions, points, maxPossiblePoints, answer } =
+    useCusHookValue();
+
   return (
     <header className="progress">
       <progress max={numQuestions} value={index + Number(answer !== null)} />

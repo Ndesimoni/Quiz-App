@@ -1,7 +1,12 @@
-const Options = ({ questions, dispatch, answer }) => {
+import { useCusHookValue } from "../context/ReactQuizContext";
+
+const Options = ({ questions }) => {
+  const { dispatch, answer } = useCusHookValue();
+
   const hasAnswer = answer !== null;
-  console.log(questions);
-  console.log(questions.options);
+  // console.log(questions);
+  // console.log(questions.options);
+
   return (
     <div className="options">
       {questions.options.map((option, index) => (
